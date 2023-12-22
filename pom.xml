@@ -9,11 +9,11 @@
     </parent>
     <groupId>ivanio1</groupId>
     <artifactId>exchange-bot</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>exchange-bot</name>
     <description>exchange-bot</description>
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>

@@ -1,14 +1,17 @@
 package ivanio1.exchangebot.service;
 
+
 import ivanio1.exchangebot.client.CbrClient;
 import ivanio1.exchangebot.exception.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
+import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
-import javax.swing.text.Document;
+
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
