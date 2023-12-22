@@ -30,14 +30,20 @@ public class ExchangeRatesServiceImpl implements ExchangeRatesService {
 
     @Override
     public String getUSDExchangeRate() throws ServiceException {
-        var xml = client.getCurrencyRatesXML();
-        return extractCurrencyValueFromXML(xml,USD_XPATH);
+        var xmlOptional = client.getCurrencyRatesXML();
+        String xml = xmlOptional.orElseThrow(
+                () -> new ServiceException("Не удалось получить XML")
+        );
+        return extractCurrencyValueFromXML(xml, USD_XPATH);
     }
 
     @Override
     public String getEURExchangeRate() throws ServiceException {
-        var xml = client.getCurrencyRatesXML();
-        return extractCurrencyValueFromXML(xml,EUR_XPATH);
+        var xmlOptional = client.getCurrencyRatesXML();
+        String xml = xmlOptional.orElseThrow(
+                () -> new ServiceException("Не удалось получить XML")
+        );
+        return extractCurrencyValueFromXML(xml, EUR_XPATH);
     }
 
     private static String extractCurrencyValueFromXML(String xml, String xpathExpression)
