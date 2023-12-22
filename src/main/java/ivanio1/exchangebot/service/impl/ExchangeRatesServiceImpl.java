@@ -1,8 +1,9 @@
-package ivanio1.exchangebot.service;
+package ivanio1.exchangebot.service.impl;
 
 
 import ivanio1.exchangebot.client.CbrClient;
 import ivanio1.exchangebot.exception.ServiceException;
+import ivanio1.exchangebot.service.ExchangeRatesService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
